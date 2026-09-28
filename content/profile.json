@@ -66,6 +66,12 @@
   },
   "now": [
     {
+      "title": "agriculture-ai",
+      "label": "Research Assistant · In development",
+      "description": "An ongoing research project using drone images to look for signs of crop stress. I’m preparing the imagery and building a foundation for later computer-vision models.",
+      "url": ""
+    },
+    {
       "title": "WMSV",
       "label": "Ongoing research",
       "description": "I’m studying how errors in recorded data can change a regression’s conclusion. The aim is to understand how much a measurement would need to change before a relationship switches direction.",
