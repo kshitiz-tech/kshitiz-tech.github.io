@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="$description">
+    <meta name="author" content="$name">
+    <meta name="theme-color" content="#17263e">
+    <link rel="canonical" href="$canonical">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="$title">
+    <meta property="og:description" content="$description">
+    <meta property="og:url" content="$canonical">
+    <meta property="og:image" content="$image">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">$structured_data</script>
+    <title>$title</title>
+    <link rel="icon" href="$prefix/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="$prefix/$stylesheet">
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header wrap">
+        <a class="mark" href="$prefix/" aria-label="Kshitiz Neupane, home">KN<span aria-hidden="true">.</span></a>
+        <nav aria-label="Main navigation">
+          <a href="$prefix/#work">Work</a>
+          <a href="$prefix/#about">About</a>
+          <a href="$prefix/research/">Research</a>
+          <a href="$prefix/#now">Now</a>
+        </nav>
+        <details class="resume-menu"><summary class="header-resume">Résumé <span aria-hidden="true">↓</span></summary><div class="resume-options" aria-label="Choose a résumé to download"><p class="resume-options-title">Choose a résumé</p>$resume_options</div></details>
+      </header>
+      <main id="main">$content</main>
+      <footer class="site-footer wrap"><p>© $year $name</p><p>Hattiesburg, Mississippi</p><div class="social-links"><a href="$github">GitHub ↗</a><a href="$linkedin">LinkedIn ↗</a><a href="mailto:$email">Email ↗</a></div></footer>
+    </div>
+  </body>
+</html>

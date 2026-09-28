@@ -1,6 +1,7 @@
 """Checks for content edits, escaping, broken navigation, and deployment boundaries."""
 
 import copy
+from html import escape
 import importlib.util
 import json
 from pathlib import Path
@@ -66,9 +67,28 @@ class BuildTests(unittest.TestCase):
             files = {str(p.relative_to(output)) for p in output.rglob("*") if p.is_file()}
             bundles = {name for name in files if name.startswith("assets/app-") and name.endswith(".js")}
             self.assertEqual(len(bundles), 1)
-            self.assertEqual(files - bundles, {"index.html", "styles.css", ".nojekyll", "assets/favicon.svg", "assets/avatar_sketch_under_1mb.jpg", "assets/Kshitiz-Neupane-Resume.pdf", *builder.project_assets(self.data)})
+            self.assertEqual(files - bundles, {"index.html", "styles.css", ".nojekyll", "robots.txt", "sitemap.xml", "research/index.html", *(f"projects/{project['id']}/index.html" for project in self.data["projects"]), "assets/favicon.svg", "assets/avatar_sketch_under_1mb.jpg", "assets/Kshitiz-Neupane-Resume.pdf", *(resume["file"] for resume in self.data["resumes"]), *builder.project_assets(self.data)})
             self.assertIn(next(iter(bundles)), (output / "index.html").read_text())
             self.assertNotIn("/home/", (output / "index.html").read_text())
+
+    def test_search_pages_have_unique_canonical_urls_and_visible_content(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            output = Path(tmp)
+            builder.build(output)
+            home = (output / "index.html").read_text()
+            research = (output / "research/index.html").read_text()
+            project = (output / "projects/shiftguard/index.html").read_text()
+            sitemap = (output / "sitemap.xml").read_text()
+            self.assertIn('rel="canonical" href="https://kshitiz-tech.com/"', home)
+            self.assertIn('rel="canonical" href="https://kshitiz-tech.com/research/"', research)
+            self.assertIn('rel="canonical" href="https://kshitiz-tech.com/projects/shiftguard/"', project)
+            self.assertIn("Can distribution shift warn us", project)
+            self.assertIn("shiftguard-auroc.png", project)
+            self.assertIn("https://kshitiz-tech.com/projects/shiftguard/", sitemap)
+            self.assertIn("Sitemap: https://kshitiz-tech.com/sitemap.xml", (output / "robots.txt").read_text())
+            for resume in self.data["resumes"]:
+                self.assertIn(resume["file"], (output / "assets/app.js").read_text() if (output / "assets/app.js").is_file() else " ".join(p.read_text() for p in output.glob("assets/app-*.js")))
+                self.assertIn(escape(resume["label"]), project)
 
 
 if __name__ == "__main__":

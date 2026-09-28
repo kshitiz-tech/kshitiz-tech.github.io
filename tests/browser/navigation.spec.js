@@ -164,8 +164,8 @@ test('every project has its own page with details and project visuals', async ({
 
   await page.goto('/#work');
   await page.getByRole('button', { name: 'Data science', exact: true }).click();
-  await page.locator('#project-f1 a[href="#project/f1"]').click();
-  await expect(page).toHaveURL(/#project\/f1$/);
+  await page.locator('#project-f1 a[href="projects/f1/"]').click();
+  await expect(page).toHaveURL(/\/projects\/f1\/$/);
   await expect(page.locator('#project-page-title')).toHaveText('F1 Race Analysis');
   await page.locator('.back-link').click();
   await expectOnlyPage(page, 'work');

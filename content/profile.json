@@ -17,6 +17,13 @@
     ],
     "about": "I am a student passionate about machine learning and artificial intelligence, with a particular interest in understanding and improving these fields through their mathematical foundations. I enjoy learning concepts from the ground up—digging into where ideas come from, why they work, and how they can be developed further through research. My goal is not only to use existing AI systems, but to contribute to the theory and methods behind them. Outside academics and research, I enjoy playing music, especially piano, and staying active through sports, particularly badminton. I see myself as a curious learner who enjoys exploring ideas deeply, building new things, and continuously challenging my understanding."
   },
+  "resumes": [
+    { "label": "General", "description": "A broad overview of my work", "file": "assets/Kshitiz_Neupane_General.pdf" },
+    { "label": "Data & ML", "description": "Data science and machine learning", "file": "assets/Kshitiz_Neupane_Data_ML.pdf" },
+    { "label": "ML Research", "description": "Research and mathematical foundations", "file": "assets/Kshitiz_Neupane_ML_Research.pdf" },
+    { "label": "Software Engineering", "description": "Software projects and engineering", "file": "assets/Kshitiz_Neupane_Software_Engineering.pdf" },
+    { "label": "Summer 2026", "description": "Summer opportunities", "file": "assets/Kshitiz_Neupane_Resume_2026_Summer.pdf" }
+  ],
   "education": {
     "institution": "University of Southern Mississippi",
     "degree": "B.S. in Computer Science and Mathematics",

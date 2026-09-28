@@ -4,7 +4,10 @@ import data from '../content/profile.json';
 
 const { profile, education, research } = data;
 const routes = { top: 'Home', work: 'Work', about: 'About', research: 'Research', now: 'Now' };
-const resumeUrl = 'assets/Kshitiz-Neupane-Resume.pdf';
+
+function ResumeMenu() {
+  return <details className="resume-menu"><summary className="header-resume">Résumé <span aria-hidden="true">↓</span></summary><div className="resume-options" aria-label="Choose a résumé to download"><p className="resume-options-title">Choose a résumé</p>{data.resumes.map((resume) => <a key={resume.file} href={resume.file} download><span><strong>{resume.label}</strong><small>{resume.description}</small></span><span aria-hidden="true">↓</span></a>)}</div></details>;
+}
 
 function routeFromLocation() {
   const hash = window.location.hash.slice(1);
@@ -33,7 +36,7 @@ function Home({ navigate }) {
 }
 
 function Project({ project, index }) {
-  return <article className="project" id={`project-${project.id}`} aria-labelledby={`title-${project.id}`}><div className="project-visual"><ProjectImage project={project} /></div><div className="project-info"><p className="project-category">{String(index + 1).padStart(2, '0')} / {project.category}</p><h2 id={`title-${project.id}`}>{project.name}</h2><p className="project-description">{project.description}</p><ul className="tags" aria-label="Technologies">{project.stack.slice(0, 3).map(tag => <li key={tag}>{tag}</li>)}</ul><div className="project-actions"><a className="project-link" href={`#project/${project.id}`}>View project <Arrow /></a>{project.url && <a className="project-link secondary" href={project.url}>Repository <Arrow /></a>}</div></div></article>;
+  return <article className="project" id={`project-${project.id}`} aria-labelledby={`title-${project.id}`}><div className="project-visual"><ProjectImage project={project} /></div><div className="project-info"><p className="project-category">{String(index + 1).padStart(2, '0')} / {project.category}</p><h2 id={`title-${project.id}`}>{project.name}</h2><p className="project-description">{project.description}</p><ul className="tags" aria-label="Technologies">{project.stack.slice(0, 3).map(tag => <li key={tag}>{tag}</li>)}</ul><div className="project-actions"><a className="project-link" href={`projects/${project.id}/`}>View project <Arrow /></a>{project.url && <a className="project-link secondary" href={project.url}>Repository <Arrow /></a>}</div></div></article>;
 }
 
 function ProjectDetail({ project }) {
@@ -151,7 +154,7 @@ function App() {
         <nav aria-label="Main navigation">{Object.entries(routes).filter(([key]) => key !== 'top').map(([key, label]) => (
           <a key={key} href={`#${key}`} onClick={(event) => navigate(event, key)} aria-current={route === key || (key === 'work' && project) ? 'page' : undefined}>{label}</a>
         ))}</nav>
-        <a className="header-resume" href={resumeUrl} download>Résumé <span aria-hidden="true">↓</span></a>
+        <ResumeMenu />
       </header>
       <main id="main" ref={main} tabIndex={-1}><Page key={route} navigate={navigate} project={project} /></main>
       {route === 'top' && <footer className="site-footer wrap"><p>© {data.updated.slice(0, 4)} {profile.name}</p><p>{profile.location}</p><div className="social-links"><a href={profile.github}>GitHub <Arrow /></a><a href={profile.linkedin}>LinkedIn <Arrow /></a><a href={`mailto:${profile.email}`}>Email <Arrow /></a></div></footer>}

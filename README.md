@@ -46,9 +46,9 @@ On Ubuntu/Debian, `sudo apt-get install texlive-latex-recommended` supplies the 
 
 ## Hosting on GitHub Pages
 
-This repository publishes the portfolio with GitHub Actions to `https://kshitiz-tech.github.io/`. The custom domain is `kshitiz-tech.com`; its DNS is managed in Cloudflare. Each push to `main` runs the content and browser tests, builds the site, and deploys the public files in `dist`.
+This repository publishes the portfolio with GitHub Actions to `https://kshitiz-tech.github.io/`. The custom domain is `kshitiz-tech.com`; its DNS is managed in Cloudflare. Each push to `main` runs the content tests, builds the site, and deploys the public files in `dist`.
 
-GitHub Pages uses the custom workflow in `.github/workflows/deploy.yml`. To update the portfolio, edit `content/profile.json` or the site source and push to `main`. The workflow installs the locked npm dependencies, builds React, runs navigation tests, and publishes the resulting files. The PDF in `assets/Kshitiz-Neupane-Resume.pdf` is shipped with the site; regenerate it locally with `python3 scripts/build.py --resume` when résumé content changes.
+GitHub Pages uses the custom workflow in `.github/workflows/deploy.yml`. To update the portfolio, edit `content/profile.json` or the site source and push to `main`. The workflow installs the locked npm dependencies, runs content checks, builds React, and publishes the resulting files. The header résumé menu offers five PDFs from `assets/`; edit the `resumes` list in `content/profile.json` to change their labels or descriptions. The generated PDF in `assets/Kshitiz-Neupane-Resume.pdf` remains available; regenerate it locally with `python3 scripts/build.py --resume` when résumé content changes.
 
 This follows GitHub's [custom Pages workflow](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages) and [publishing-source setup](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
@@ -63,7 +63,7 @@ Publish the **contents of `dist/`** to your static host. It contains HTML, CSS, 
 Generate a source ZIP and a separate ready-to-host ZIP:
 
 ```bash
-python3 scripts/build.py --resume
+npm run build
 python3 scripts/package.py
 ```
 

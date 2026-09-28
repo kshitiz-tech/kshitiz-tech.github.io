@@ -157,3 +157,43 @@ body{background:radial-gradient(circle at 86% 8%,rgba(190,171,141,.15),transpare
 @media(max-width:700px){.filters{gap:8px}.filters button,.filters button[aria-pressed=true]{font-size:11px;padding:9px 12px}}
 .project-actions .project-link:first-child{display:inline-flex;align-items:center;gap:18px;background:var(--royal);color:var(--ivory);padding:12px 16px;border:1px solid var(--royal);border-radius:2px;text-decoration:none}
 .project-actions .project-link:first-child:hover{background:var(--purple);border-color:var(--purple);color:var(--ivory)}
+
+/* Larger type keeps the open layout comfortable to read on every page. */
+body{font-size:16px}
+.site-header nav{font-size:15px}
+.header-resume,.home-links,.project-link,.text-link,.back-link,.paper-links{font-size:14px}
+.eyebrow,.edition,.project-category{font-size:11px}
+.site-footer{font-size:13px;line-height:1.5}
+.home-intro{font-size:17px}
+.home-motto{font-size:23px}
+.home-current>p:nth-child(2){font-size:15px}
+.page-title{font-size:40px}
+.project-info h2{font-size:32px}
+.project-description,.section-heading>p,.experience-item p,.skill-list>div>p:last-child,.education>p,.research-topic p,.now-item p:last-child{font-size:15px}
+.research-entry h2,.research-interest h2,.now-item h2{font-size:29px}
+.research-entry>p:not(.eyebrow),.research-interest>p:not(.eyebrow),.project-page-header .project-page-summary>p,.project-page-content section>p:not(.eyebrow){font-size:16px}
+.research-entry .paper-authors,.project-page-content aside>ul:not(.tags) li,.gallery-heading>p:last-child{font-size:14px}
+.bio p{font-size:17px}
+.filters button,.filters button[aria-pressed=true]{font-size:14px}
+.tags li,.project-page-lead figcaption,.detail-gallery figcaption,.project-figure figcaption,.status,.updated{font-size:12px}
+.project-page-header .page-title{font-size:clamp(40px,4.8vw,68px)}
+.project-page-question{font-size:23px}
+.project-page-content h2,.project-page-gallery h2{font-size:32px}
+.project-next a{font-size:27px}
+@media(max-width:700px){.site-header nav{font-size:13px}.site-footer{font-size:12px}.home-intro{font-size:16px}.home-profile h1{font-size:40px}.page-title{font-size:34px}.project-info h2{font-size:30px}.research-entry h2,.research-interest h2,.now-item h2{font-size:26px}.filters button,.filters button[aria-pressed=true]{font-size:12px}.project-page-header .page-title{font-size:40px}.project-next a{font-size:22px}}
+
+/* A compact, keyboard-accessible résumé chooser shared by React and static pages. */
+.resume-menu{position:relative;flex-shrink:0;z-index:20}
+.resume-menu summary{display:block;cursor:pointer;list-style:none;white-space:nowrap}
+.resume-menu summary::-webkit-details-marker{display:none}
+.resume-menu[open] summary{color:var(--purple)}
+.resume-options{position:absolute;right:0;top:calc(100% + 12px);width:min(330px,calc(100vw - 40px));background:var(--ivory);color:var(--royal);border:1px solid var(--line);border-top:4px solid var(--royal);box-shadow:0 18px 35px #17263e2b;padding:18px;z-index:30}
+.resume-options-title{font:12px/1.4 var(--sans);letter-spacing:1px;text-transform:uppercase;margin:0 0 8px;color:var(--muted)}
+.resume-options a{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:12px 4px;border-bottom:1px solid var(--line);text-decoration:none}
+.resume-options a:last-child{border-bottom:0}
+.resume-options a:hover,.resume-options a:focus-visible{color:var(--purple);background:var(--tint)}
+.resume-options strong,.resume-options small{display:block}
+.resume-options strong{font:16px/1.4 var(--serif)}
+.resume-options small{font:12px/1.5 var(--sans);color:var(--muted);margin-top:2px}
+.resume-options a>span:last-child{font-size:18px}
+@media(max-width:700px){.resume-options{right:0;top:calc(100% + 10px)}.resume-options strong{font-size:15px}}
