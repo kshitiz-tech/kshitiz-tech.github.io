@@ -66,12 +66,6 @@
   },
   "now": [
     {
-      "title": "agriculture-ai",
-      "label": "In development",
-      "description": "An early project using drone images to look for signs of crop stress. I’m working on preparing the images and building a foundation for later models.",
-      "url": ""
-    },
-    {
       "title": "WMSV",
       "label": "Ongoing research",
       "description": "I’m studying how errors in recorded data can change a regression’s conclusion. The aim is to understand how much a measurement would need to change before a relationship switches direction.",
@@ -90,10 +84,11 @@
       "organization": "University of Southern Mississippi",
       "location": "Hattiesburg, MS",
       "dates": "Aug. 2024 – Present",
-      "summary": "NLP, graph learning, and anomaly detection in organizational communication.",
+      "summary": "Machine learning research across NLP, graph learning, and anomaly detection, alongside agriculture-ai, an early computer-vision project preparing drone imagery for future crop-stress models.",
       "bullets": [
         "Developed a two-stage email-analysis pipeline combining graph-neural-network anomaly detection with ModernBERT content verification; reported 86% filtering recall and over 92% precision after verification.",
-        "Automated data preparation, tokenization, GPU-aware training, and evaluation with PyTorch/PyG, Transformers, and scikit-learn; documented baseline comparisons, diagnostic visualizations, and failure modes."
+        "Automated data preparation, tokenization, GPU-aware training, and evaluation with PyTorch/PyG, Transformers, and scikit-learn; documented baseline comparisons, diagnostic visualizations, and failure modes.",
+        "Building agriculture-ai, an early computer-vision project that prepares drone imagery to support future crop-stress models."
       ]
     },
     {
