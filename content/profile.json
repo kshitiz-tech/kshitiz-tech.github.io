@@ -1,0 +1,470 @@
+{
+  "updated": "2026-09-27",
+  "profile": {
+    "name": "Kshitiz Neupane",
+    "initials": "KN",
+    "email": "kshitiz.neupane@usm.edu",
+    "phone": "(601) 913-8554",
+    "location": "Hattiesburg, Mississippi",
+    "resume_location": "Hattiesburg, MS",
+    "github": "https://github.com/kshitiz-tech",
+    "linkedin": "https://www.linkedin.com/in/kshitiz-neupane-930571216",
+    "discipline": "Machine Learning & Data Science",
+    "tagline": "Carpe Diem",
+    "intro": "I study Computer Science and Mathematics at the University of Southern Mississippi. My work focuses on machine learning and data science.",
+    "bio": [
+      "Carpe Diem"
+    ],
+    "about": "I am a student passionate about machine learning and artificial intelligence, with a particular interest in understanding and improving these fields through their mathematical foundations. I enjoy learning concepts from the ground up—digging into where ideas come from, why they work, and how they can be developed further through research. My goal is not only to use existing AI systems, but to contribute to the theory and methods behind them. Outside academics and research, I enjoy playing music, especially piano, and staying active through sports, particularly badminton. I see myself as a curious learner who enjoys exploring ideas deeply, building new things, and continuously challenging my understanding."
+  },
+  "education": {
+    "institution": "University of Southern Mississippi",
+    "degree": "B.S. in Computer Science and Mathematics",
+    "graduation": "Expected May 2028",
+    "gpa": "4.0 / 4.0",
+    "location": "Hattiesburg, MS",
+    "coursework": "Data Structures, Linear Algebra, Probability & Statistics, Differential Equations"
+  },
+  "research": {
+    "title": "Mechanistic interpretability",
+    "description": "I’m interested in how models reach their answers and when those answers can be trusted.",
+    "topics": [
+      {
+        "title": "Representations & circuits",
+        "description": "How useful features are represented and combined inside a model."
+      },
+      {
+        "title": "Causal understanding",
+        "description": "What interventions on internal components can reveal about a model's decisions."
+      },
+      {
+        "title": "Reliability & failure",
+        "description": "How internal behavior relates to generalization and failures under distribution shift."
+      }
+    ],
+    "publication": {
+      "title": "Filter-then-Verify",
+      "subtitle": "A Multiphase GNN and ModernBERT Framework for Social Engineering Detection in Email Networks",
+      "authors": "Barsat Khadka, Prasant Koirala, Kshitiz Neupane, and Nick Rahimi",
+      "status": "Preprint · 2026",
+      "description": "We study how to spot social engineering attacks in email. Our approach first looks for unusual communication patterns, then checks the message content to help reduce false alarms.",
+      "url": "https://arxiv.org/abs/2605.17201",
+      "scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=R7nDGkQAAAAJ&citation_for_view=R7nDGkQAAAAJ:u-x6o8ySG0sC"
+    },
+    "current": {
+      "title": "WMSV",
+      "status": "Ongoing research",
+      "description": "I’m studying how errors in recorded data can change a regression’s conclusion. The aim is to understand how much a measurement would need to change before a relationship switches direction."
+    }
+  },
+  "now": [
+    {
+      "title": "agriculture-ai",
+      "label": "In development",
+      "description": "An early project using drone images to look for signs of crop stress. I’m working on preparing the images and building a foundation for later models.",
+      "url": ""
+    },
+    {
+      "title": "WMSV",
+      "label": "Ongoing research",
+      "description": "I’m studying how errors in recorded data can change a regression’s conclusion. The aim is to understand how much a measurement would need to change before a relationship switches direction.",
+      "url": ""
+    },
+    {
+      "title": "solver-verifier-research",
+      "label": "Ongoing research",
+      "description": "I’m studying how AI models respond to feedback on math problems, especially when the feedback is wrong. The question is whether a model can correct a mistake without giving up a correct answer.",
+      "url": ""
+    }
+  ],
+  "experience": [
+    {
+      "role": "Research Assistant — ML, NLP & Cybersecurity",
+      "organization": "University of Southern Mississippi",
+      "location": "Hattiesburg, MS",
+      "dates": "Aug. 2024 – Present",
+      "summary": "NLP, graph learning, and anomaly detection in organizational communication.",
+      "bullets": [
+        "Developed a two-stage email-analysis pipeline combining graph-neural-network anomaly detection with ModernBERT content verification; reported 86% filtering recall and over 92% precision after verification.",
+        "Automated data preparation, tokenization, GPU-aware training, and evaluation with PyTorch/PyG, Transformers, and scikit-learn; documented baseline comparisons, diagnostic visualizations, and failure modes."
+      ]
+    },
+    {
+      "role": "Software Developer Intern",
+      "organization": "Butwal Technologies",
+      "location": "Butwal, Nepal",
+      "dates": "Feb. 2024 – Aug. 2024",
+      "summary": "API testing, test automation, and technical documentation.",
+      "bullets": [
+        "Created test scripts and technical reports for API and automation work; collaborated in agile development and maintained documentation to make testing repeatable."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "shiftguard",
+      "name": "ShiftGuard",
+      "category": "Machine learning · Model reliability",
+      "description": "I built ShiftGuard to explore whether changes in incoming data can warn us that a model is becoming less reliable. It compares several ways of measuring those changes.",
+      "result": "12,000 model-window evaluations · 3 datasets · 5 classifiers",
+      "stack": [
+        "Python",
+        "pandas",
+        "SciPy",
+        "scikit-learn",
+        "pytest"
+      ],
+      "url": "https://github.com/kshitiz-tech/ShiftGuard",
+      "featured": true,
+      "resume": true,
+      "resume_title": "ShiftGuard — Model Failure Under Distribution Shift",
+      "resume_stack": "Python, SciPy, scikit-learn",
+      "bullets": [
+        "Built a reproducible benchmark spanning 3 datasets, 5 classifiers, and 5 seeds, producing 12,000 model-window evaluations to compare Wasserstein, KL, PSI, and MMD as label-free failure signals.",
+        "Measured an overall failure ROC-AUC of 0.799 for maximum marginal Wasserstein (95% CI: 0.760–0.832); used validation-only calibration and documented variation across datasets and shift types."
+      ],
+      "group": "ML reliability",
+      "image": "assets/projects/shiftguard.png",
+      "image_alt": "Failure detection ROC curves from the full ShiftGuard experiment.",
+      "caption": "Failure detection ROC curves from the full ShiftGuard experiment.",
+      "question": "Can distribution shift warn us before a classifier fails?",
+      "details": [
+        "ShiftGuard studies a practical problem: a model can look healthy when it is deployed even while the data it receives is changing. I built a repeatable experiment to test whether those changes can act as an early warning.",
+        "The project compares several distance measures across different datasets, classifiers, and types of shift. It also looks at false alarms and warning time, because a signal is only useful when it gives a clear and timely warning."
+      ],
+      "highlights": [
+        "Compares Wasserstein distance, KL divergence, PSI, and MMD",
+        "Tests controlled and time-based changes in data",
+        "Measures warning quality as well as model performance"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/shiftguard-auroc.png",
+          "alt": "Comparison of failure detection AUROC scores for ShiftGuard distance measures.",
+          "caption": "Failure detection comparison"
+        },
+        {
+          "image": "assets/projects/shiftguard-heatmap.png",
+          "alt": "Heatmap comparing ShiftGuard results across datasets, models, and shift types.",
+          "caption": "Results across datasets and models"
+        },
+        {
+          "image": "assets/projects/shiftguard-distance.png",
+          "alt": "Scatter plot showing distribution distance against model performance drop.",
+          "caption": "Distance and performance loss"
+        },
+        {
+          "image": "assets/projects/shiftguard-warning.png",
+          "alt": "Chart showing how early ShiftGuard metrics warn before model failure.",
+          "caption": "Warning lead time"
+        }
+      ]
+    },
+    {
+      "id": "f1",
+      "name": "F1 Race Analysis",
+      "category": "Data science · Predictive modeling",
+      "description": "I use historical Formula 1 data to explore pit stops and predict race outcomes. The prediction models use information available before a race, such as qualifying and recent form.",
+      "result": "Holdout podium ROC-AUC: 0.943 · Finish-position MAE: 3.554",
+      "stack": [
+        "Python",
+        "pandas",
+        "scikit-learn",
+        "StatsModels"
+      ],
+      "url": "https://github.com/kshitiz-tech/F1_data_analysis",
+      "featured": true,
+      "resume": true,
+      "resume_title": "F1 Race Analysis & Predictive Modeling",
+      "resume_stack": "Python, pandas, scikit-learn",
+      "bullets": [
+        "Engineered pre-race features and reusable preprocessing/model pipelines, achieving holdout podium ROC-AUC of 0.943 and finish-position MAE of 3.554; excluded in-race variables from predictive inputs."
+      ],
+      "group": "Data science",
+      "image": "assets/projects/f1.png",
+      "image_alt": "Yearly average pit-stop duration by team, exported from the F1 analysis notebook.",
+      "caption": "Yearly average pit-stop duration by team, exported from the F1 analysis notebook.",
+      "question": "What can we learn about race outcomes before the lights go out?",
+      "details": [
+        "This project uses historical Formula 1 data to study race performance from two angles. One part looks at pit-stop patterns and team differences. The other builds models that estimate finishing position and podium chances before a race starts.",
+        "I kept pre-race prediction separate from the pit-stop analysis so information from the race itself does not leak into the predictions. The work includes reusable data preparation and model pipelines."
+      ],
+      "highlights": [
+        "Explores pit-stop performance across teams and seasons",
+        "Uses qualifying, grid position, and recent form for prediction",
+        "Keeps analysis variables separate from pre-race model inputs"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/f1-constructors.png",
+          "alt": "Median Formula 1 pit-stop duration compared across constructors.",
+          "caption": "Pit-stop duration by constructor"
+        },
+        {
+          "image": "assets/projects/f1-heatmap.png",
+          "alt": "Heatmap of Formula 1 constructor performance by season.",
+          "caption": "Constructor and season comparison"
+        },
+        {
+          "image": "assets/projects/f1-grid-finish.png",
+          "alt": "Chart comparing Formula 1 starting grid and finishing positions.",
+          "caption": "Grid and finishing position"
+        },
+        {
+          "image": "assets/projects/f1-models.png",
+          "alt": "Comparison of predictive models used in the Formula 1 analysis.",
+          "caption": "Model comparison"
+        }
+      ]
+    },
+    {
+      "id": "bayesian",
+      "name": "Bayesian Linear Regression",
+      "category": "Statistical learning",
+      "description": "A hands-on study of Bayesian regression using housing data. I look at both the predicted prices and the uncertainty around them.",
+      "stack": [
+        "Python",
+        "NumPy",
+        "Bayesian inference"
+      ],
+      "url": "https://github.com/kshitiz-tech/Bayesian-Linear-Regression",
+      "featured": true,
+      "resume": false,
+      "group": "Statistical learning",
+      "image": "assets/projects/bayesian.png",
+      "image_alt": "Posterior predictive means and ±2σ bands from the California Housing notebook.",
+      "caption": "Posterior predictive means and ±2σ bands from the California Housing notebook.",
+      "question": "A prediction is only part of the answer. How uncertain is it?",
+      "result": "Closed-form posterior · Predictive uncertainty · Residual diagnostics",
+      "details": [
+        "I built this project to understand linear regression as a probability model rather than only a line-fitting method. It starts with a Gaussian likelihood and prior, then works through MAP estimation and the full posterior using the California Housing dataset.",
+        "The notebook studies how prior choices affect coefficients and how uncertainty in those coefficients becomes uncertainty in a prediction. Residual plots are used to see where the simple model still falls short."
+      ],
+      "highlights": [
+        "Implements MAP estimation directly with NumPy",
+        "Shows posterior uncertainty for model coefficients",
+        "Builds prediction intervals and checks residual patterns"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/bayesian-target.png",
+          "alt": "Distribution of median house values used in the Bayesian regression study.",
+          "caption": "Target distribution"
+        },
+        {
+          "image": "assets/projects/bayesian-residuals.png",
+          "alt": "Residual plot for the Bayesian linear regression predictions.",
+          "caption": "Prediction residuals"
+        },
+        {
+          "image": "assets/projects/bayesian-features.png",
+          "alt": "Residual patterns shown separately for California Housing features.",
+          "caption": "Residuals across features"
+        },
+        {
+          "image": "assets/projects/bayesian-posterior.png",
+          "alt": "Posterior coefficient means and uncertainty for Bayesian linear regression.",
+          "caption": "Posterior coefficient uncertainty"
+        }
+      ]
+    },
+    {
+      "id": "pca",
+      "name": "PCA from Scratch",
+      "category": "Mathematical foundations",
+      "description": "I built PCA from the underlying linear algebra to understand how it compresses handwritten digit images. I explore what information stays and what gets lost.",
+      "stack": [
+        "Python",
+        "NumPy",
+        "Linear algebra"
+      ],
+      "url": "https://github.com/kshitiz-tech/Principal_Component_Analysis",
+      "featured": true,
+      "resume": false,
+      "group": "Statistical learning",
+      "image": "assets/projects/pca.png",
+      "image_alt": "MNIST digits projected onto the first two principal components.",
+      "caption": "MNIST digits projected onto the first two principal components.",
+      "question": "How much structure survives when we reduce the dimensions?",
+      "result": "MNIST digits · Eigenvectors · Reconstruction analysis",
+      "details": [
+        "This project builds principal component analysis from its linear algebra. I use handwritten digits to see how covariance, eigenvectors, and maximum-variance directions turn a large image space into a smaller representation.",
+        "The visualizations show the first two components, the patterns learned by the components, and how well digits can be rebuilt after compression. This makes the tradeoff between fewer dimensions and lost detail visible."
+      ],
+      "highlights": [
+        "Implements PCA from covariance and eigendecomposition",
+        "Projects MNIST digits into two dimensions",
+        "Measures and visualizes reconstruction quality"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/pca-components.png",
+          "alt": "Leading principal components learned from handwritten digit images.",
+          "caption": "Learned principal components"
+        },
+        {
+          "image": "assets/projects/pca-reconstruction.png",
+          "alt": "Original handwritten digits compared with PCA reconstructions using 40 components.",
+          "caption": "Original and reconstructed digits"
+        },
+        {
+          "image": "assets/projects/pca-error.png",
+          "alt": "PCA reconstruction errors for handwritten digits.",
+          "caption": "Reconstruction error"
+        }
+      ]
+    },
+    {
+      "id": "workforge",
+      "name": "WorkForge AI / ProjectOps Studio",
+      "category": "Software · Applied AI",
+      "description": "An AI project workspace for keeping files, team updates, and deliverables together. It helps teams review submitted work, see what needs attention, and plan what to do next.",
+      "result": "Dashboard · Project files · Deliverable review · AI memory",
+      "stack": [
+        "React",
+        "FastAPI",
+        "Python"
+      ],
+      "url": "",
+      "featured": false,
+      "resume": true,
+      "resume_title": "WorkForge AI / ProjectOps Studio — AI Project Operations",
+      "resume_stack": "React, FastAPI, Python",
+      "bullets": [
+        "Built an AI-assisted project workspace combining team activity, project files, deliverable reviews, and persistent project context.",
+        "Created review and suggestion flows to help teams summarize progress, spot gaps, and plan follow-up work."
+      ],
+      "group": "Software",
+      "image": "assets/projects/workforge-review.png",
+      "image_alt": "ProjectOps Studio deliverable review showing an AI summary, feedback, and approval options.",
+      "caption": "ProjectOps Studio: AI-assisted deliverable review.",
+      "question": "One place for project work, team context, and AI-assisted reviews.",
+      "details": [
+        "WorkForge AI, presented in the interface as ProjectOps Studio, brings project work into one workspace. Teams can see members, communication, files, progress, and deliverables without moving between separate tools.",
+        "The AI features use the project’s existing context to summarize progress, review deliverables, point out gaps, and suggest next steps. AI memory keeps useful project history available so recommendations can reflect earlier work."
+      ],
+      "highlights": [
+        "Combines team activity, files, and deliverables",
+        "Provides AI-assisted reviews and project suggestions",
+        "Keeps project context through an AI memory view"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/workforge-dashboard.png",
+          "alt": "ProjectOps Studio dashboard with team messages, progress, and smart suggestions.",
+          "caption": "Team dashboard"
+        },
+        {
+          "image": "assets/projects/workforge-files.png",
+          "alt": "ProjectOps Studio project files page with filters and document cards.",
+          "caption": "Project files"
+        },
+        {
+          "image": "assets/projects/workforge-memory.png",
+          "alt": "ProjectOps Studio AI memory page with team context and insights.",
+          "caption": "AI memory"
+        }
+      ]
+    },
+    {
+      "id": "manageyourhome",
+      "name": "ManageYourHome",
+      "category": "Software engineering · Web",
+      "description": "An app for keeping track of shared household purchases. It works out each person’s share and keeps expenses in one place.",
+      "result": "JWT authentication · Shared expense calculations · REST API",
+      "stack": [
+        "React",
+        "TypeScript",
+        "Django REST",
+        "JWT"
+      ],
+      "url": "https://github.com/kshitiz-tech/ManageYourHome",
+      "featured": false,
+      "resume": true,
+      "resume_title": "ManageYourHome — Household Expense Sharing",
+      "resume_stack": "React, TypeScript, Django REST, JWT",
+      "bullets": [
+        "Built a full-stack expense-sharing app with JWT access-token refresh, authenticated CRUD APIs, pagination, and server-side per-user expense and tax calculations."
+      ],
+      "group": "Software",
+      "image": "assets/projects/manageyourhome.png",
+      "image_alt": "Local application screenshot of the shared expense list.",
+      "caption": "Local application screenshot of the shared expense list.",
+      "question": "Making shared household expenses easier to understand.",
+      "details": [
+        "ManageYourHome helps people record purchases made for a household and divide the cost among the people who share them. Each list keeps the items, tax, payer, and individual shares together.",
+        "The application has a React and TypeScript interface backed by a Django REST API. It includes authentication, editable lists, per-person totals, and a details view for reviewing spending across several lists."
+      ],
+      "highlights": [
+        "Calculates item shares and tax on the server",
+        "Supports secure sign-in and editable expense lists",
+        "Shows spending totals by person and category"
+      ],
+      "gallery": [
+        {
+          "image": "assets/projects/manageyourhome-login.png",
+          "alt": "ManageYourHome login screen.",
+          "caption": "Sign in"
+        },
+        {
+          "image": "assets/projects/manageyourhome-list.png",
+          "alt": "ManageYourHome list page showing shared household orders.",
+          "caption": "Shared expense lists"
+        },
+        {
+          "image": "assets/projects/manageyourhome-details.png",
+          "alt": "ManageYourHome item details and totals for a shared order.",
+          "caption": "Item and cost breakdown"
+        },
+        {
+          "image": "assets/projects/manageyourhome-spending.png",
+          "alt": "ManageYourHome filtered spending details across multiple lists.",
+          "caption": "Spending details"
+        }
+      ]
+    },
+    {
+      "id": "money-manager",
+      "name": "Money Manager",
+      "category": "Application development",
+      "description": "A budgeting app for recording income and expenses, setting monthly budgets, and seeing where money goes.",
+      "stack": [
+        "Python",
+        "Kivy",
+        "SQLite",
+        "Docker"
+      ],
+      "url": "https://github.com/kshitiz-tech/MoneyManagers",
+      "featured": false,
+      "resume": false,
+      "group": "Software",
+      "image": "assets/projects/money-manager.svg",
+      "image_alt": "Architecture diagram based on the local Kivy and SQLite implementation.",
+      "caption": "Architecture diagram based on the local Kivy and SQLite implementation.",
+      "question": "Connecting everyday transactions to a clearer budget.",
+      "details": [
+        "Money Manager is a personal budgeting application for recording income and expenses, setting a monthly budget, and reviewing spending over time.",
+        "The application uses Kivy for its interface and SQLite for local storage. It can also run through Docker with a browser-based display, which makes the desktop application easier to try on another computer."
+      ],
+      "highlights": [
+        "Records income and expense transactions",
+        "Tracks monthly budgets and spending summaries",
+        "Stores data locally with SQLite"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "Languages",
+      "items": "Python, TypeScript, JavaScript, SQL, C++"
+    },
+    {
+      "label": "ML & Data",
+      "items": "PyTorch/PyG, Transformers, scikit-learn, pandas, NumPy, SciPy, NLP, Bayesian inference"
+    },
+    {
+      "label": "Software & Tools",
+      "items": "React, Django/DRF, FastAPI, REST APIs, Git, Linux, Docker, GitHub Actions, SQLite, PostgreSQL"
+    }
+  ]
+}

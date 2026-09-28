@@ -1,0 +1,15 @@
+dist/
+node_modules/
+playwright-report/
+test-results/
+assets/app-*.js
+__pycache__/
+*.pyc
+*.aux
+*.log
+*.out
+*.synctex.gz
+.DS_Store
+.env
+.env.*
+!.env.example

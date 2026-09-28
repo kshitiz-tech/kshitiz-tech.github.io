@@ -1,0 +1,21 @@
+{
+  "name": "kshitiz-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "python3 scripts/build.py --output dist",
+    "build:preview": "python3 scripts/build.py",
+    "dev": "python3 scripts/build.py && python3 -m http.server 4173 --bind 127.0.0.1",
+    "test": "python3 -m unittest discover -s tests -v",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "esbuild": "0.28.2"
+  }
+}
